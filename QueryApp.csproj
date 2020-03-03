@@ -9,5 +9,11 @@
     <PackageReference Include="AWSSDK.S3" Version="3.3.110.12" />
     <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.3.100.1" />
     <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="4.1.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.10.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MongoDAL">
+      <HintPath>..\eventsourcedonboarding\EventSourcedOnboarding\Projection\bin\Release\netstandard2.0\MongoDAL.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
