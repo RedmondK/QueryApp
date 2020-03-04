@@ -37,7 +37,7 @@ namespace QueryApp.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public string Get(string id)
         {
             var filter = Builders<BsonDocument>.Filter.Eq("Id", id.ToString());
             var entityCollection = mongoRepository.GetCollection("Case");
