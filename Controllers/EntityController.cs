@@ -37,9 +37,14 @@ namespace QueryApp.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public string Get(string id)
         {
-            return "value";
+            var filter = Builders<BsonDocument>.Filter.Eq("Id", id.ToString());
+            var entityCollection = mongoRepository.GetCollection("Entity");
+
+            var searchResult = entityCollection.Find(filter).First();
+
+            return searchResult.ToString();
         }
 
         // POST api/values
